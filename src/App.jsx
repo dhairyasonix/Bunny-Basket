@@ -1,16 +1,10 @@
+import Spline from '@splinetool/react-spline';
 
-
-function App() {
+export default function App() {
+  return (<div className=' text-xl font-bold'>
+    <h1>Hello world</h1>
+   
   
-
-  return (
-    <>
-      
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
-
-export default App
