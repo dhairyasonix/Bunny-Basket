@@ -1,12 +1,11 @@
-Navbar
-lading page
-<Navbar />
-      <LandinPage />
-      <FeaturedHighlights />
-      <AboutUs />
-      <SpecialBakes />
-      <BakingExperts />
-      <CustomerFavorites />
-      <Newsletter />
-      <VisitOrder />
-      <Footer >
+- Navbar
+- lading page
+- FeaturesSection
+- AboutUs
+- SpecialBakes 
+- 
+- BakingExperts 
+- CustomerFavorites 
+- Newsletter 
+- VisitOrder
+- Footer 

@@ -8,8 +8,8 @@ const LandingPage = () => {
           <p className="font-semibold text-lg my-5">
             Get 25% off on yout first Order
           </p>
-          <h1 className="text-5xl">Wellcome to our</h1>
-          <h1 className="text-5xl font-semibold leading-none">Bunny Basket</h1>
+          <h1 className="text-6xl">Wellcome to our</h1>
+          <h1 className="text-6xl font-semibold leading-none">Bunny Basket</h1>
           <p className="text-lg w-[30vw] mt-2">
             Indulge in the warmth of freshly baked breads, pastries, and
             desserts made with love. At Bunny Basket, we bring you artisanal
