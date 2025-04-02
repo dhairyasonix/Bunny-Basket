@@ -1,10 +1,11 @@
-import Spline from '@splinetool/react-spline';
+import LandingPage from "./Components/LandingPage";
+import Navbar from "./Components/Navbar";
 
 export default function App() {
-  return (<div className=' text-xl font-bold'>
-    <h1>Hello world</h1>
-   
-  
+  return (
+    <div className=" w-full h-screen">
+    <Navbar/>
+    <LandingPage/>
     </div>
   );
 }
