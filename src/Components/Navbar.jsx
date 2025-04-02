@@ -17,7 +17,7 @@ const Navbar = () => {
         ))}
       </div>
       <div>
-        <button className="border px-2 py-1 rounded-lg">cart</button>
+        <button className="border px-2 py-1 rounded-sm">cart</button>
       </div>
     </nav>
   );

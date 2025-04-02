@@ -6,6 +6,7 @@ export default function App() {
     <div className=" w-full h-screen">
     <Navbar/>
     <LandingPage/>
+    
     </div>
   );
 }
