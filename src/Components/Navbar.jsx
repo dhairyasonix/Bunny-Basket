@@ -7,8 +7,8 @@ const Navbar = () => {
         <h1>logo</h1>
       </div>
       <div className=" items-center space-x-4">
-        {["Home", "About", "Menu", "Contact"].map((item) => (
-          <a
+        {["Home", "About", "Menu", "Contact"].map((item,index) => (
+          <a key={index}
             to="/"
             className="text-gray-600 hover:text-gray-800 cursor-pointer"
           >
