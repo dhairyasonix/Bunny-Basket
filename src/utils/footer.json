@@ -1,0 +1,65 @@
+{
+    "brand": {
+      "name": "Bunny Basket",
+      "tagline": "Seal Life's Sweetest Moments With Treats From Our Kitchen"
+    },
+    
+    "links": {
+    "Support": [
+      { "label": "Account", "href": "/account" },
+      { "label": "Support Center", "href": "/support" },
+      { "label": "Feedback", "href": "/feedback" },
+      { "label": "Accessibility", "href": "/accessibility" }
+    ],
+
+    "Menu": [
+      { "label": "Specials", "href": "/menu#specials" },
+      { "label": "Popular", "href": "/menu#popular" },
+      { "label": "Categories", "href": "/menu#categories" }
+    ],
+
+    "Useful": [
+      { "label": "Payment & Taxes", "href": "/payment-info" },
+      { "label": "Terms of Service", "href": "/terms" },
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "About Us", "href": "/about" }
+    ],
+
+    "Contact": [
+      { "label": "hello@bunnybasket.com", "href": "mailto:hello@bunnybasket.com" },
+      { "label": "+91 800 7777 8888", "href": "tel:+918007777888" }
+    ]
+  },
+    "socialMedia": [
+      {
+        "platform": "Facebook",
+        "icon": "facebook.svg",
+        "url": "https://facebook.com/bunnybasket"
+      },
+      {
+        "platform": "Instagram",
+        "icon": "instagram.svg",
+        "url": "https://instagram.com/bunnybasket"
+      },
+      {
+        "platform": "Twitter",
+        "icon": "twitter.svg",
+        "url": "https://twitter.com/bunnybasket"
+      },
+      {
+        "platform": "LinkedIn",
+        "icon": "linkedin.svg",
+        "url": "https://linkedin.com/company/bunnybasket"
+      }
+    ],
+    "payments": [
+      "/visa.svg",
+      "/mastercard.svg",
+      "/american-express.svg",
+      "/discover.svg"
+    ],
+    "copyright": {
+      "text": "© 2025 Bunny Basket. All rights reserved."
+    }
+  }
+  

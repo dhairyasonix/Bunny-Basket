@@ -4,8 +4,7 @@ const ProductCard = ({data}) => {
 
 const {name,image_url,price, stars , reviews} = data
 const totalStars =5;
-console.log(stars)
-console.log(data)
+
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
