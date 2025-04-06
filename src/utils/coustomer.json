@@ -4,34 +4,34 @@
       "name": "Brooklyn Simmons",
       "comment": "From the first bite, you can taste the passion and quality in every bake. Whether it's our signature cakes, freshly baked pastries, or crispy cookies, Bunny Basket never disappoints. Our team puts heart and creativity into every product, and it truly shows!",
       "tag": "Dedicated Customer",
-      "image_url": "Brooklyn.png"
+      "image_url": "/Brooklyn.png"
     },
     {
       "id": "testimonial02",
       "name": "Emma Patel",
       "comment": "I've tried pastries from countless places, but Bunny Basket stands out with its rich flavors and perfect textures. Whether I'm grabbing a quick snack or celebrating a special occasion, I know I can always count on their quality.",
       "tag": "Pastry Lover",
-      "image_url": "Emma.png"
+      "image_url": "/Emma.png"
     },
     {
       "id": "testimonial03",
       "name": "Michael Chen",
       "comment": "Bunny Basket has become my go-to spot for cakes. Their Red Velvet is to die for, and the presentation always leaves a lasting impression. Perfect for celebrations or just treating yourself!",
       "tag": "Cake Enthusiast",
-      "image_url": "Michael.png"
+      "image_url": "/Michael.png"
     },
     {
       "id": "testimonial04",
       "name": "Sophia Miller",
       "comment": "I can't get enough of their cookies! The Choco Chip is my personal favorite — crispy on the outside and soft in the center. Paired with a coffee, it's pure bliss!",
       "tag": "Cookie Aficionado",
-      "image_url": "Sophia.png"
+      "image_url": "/Sophia.png"
     },
     {
       "id": "testimonial05",
       "name": "Liam Rivera",
       "comment": "Every visit to Bunny Basket feels special. The ambiance, the warm service, and, of course, the delicious treats make it my favorite spot in town. Highly recommend the chocolate éclairs!",
       "tag": "Frequent Visitor",
-      "image_url": "Liam.png"
+      "image_url": "/Liam.png"
     }
   ]

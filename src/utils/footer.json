@@ -33,22 +33,22 @@
     "socialMedia": [
       {
         "platform": "Facebook",
-        "icon": "facebook.svg",
+        "icon": "/facebook.png",
         "url": "https://facebook.com/bunnybasket"
       },
       {
         "platform": "Instagram",
-        "icon": "instagram.svg",
+        "icon": "/instagram.png",
         "url": "https://instagram.com/bunnybasket"
       },
       {
         "platform": "Twitter",
-        "icon": "twitter.svg",
+        "icon": "/twitter.png",
         "url": "https://twitter.com/bunnybasket"
       },
       {
         "platform": "LinkedIn",
-        "icon": "linkedin.svg",
+        "icon": "/linkedin.png",
         "url": "https://linkedin.com/company/bunnybasket"
       }
     ],

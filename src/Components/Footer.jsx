@@ -14,14 +14,14 @@ const Footer = () => {
         <div className="flex mt-4 ">
           {socialMedia.map((item) => (
             <a
-              className="p-2 mr-4 border rounded-sm"
+              className="p-2 mr-4 bg-white  items-center justify-center rounded-md shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-shadow duration-300 hover:bg-[#6b3b0a] group "
               key={item.platform}
               href={item.url}
             >
               {" "}
               <img
-                className="w-5 h-5 "
-                src={`/${item.icon}`}
+                className="w-5 h-5 group-hover:invert"
+                src={item.icon}
                 alt={item.platform}
               />
             </a>

@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Fastest Delivery",
+      "subtitle": "Enjoy quick and reliable delivery of your favorite bakery treats right to your doorstep.",
+      "image": "/delivery.svg",
+      "label": "Deliver"
+    },
+    {
+      "id": 2,
+      "title": "Best Taste",
+      "subtitle": "Our secret recipes and premium ingredients ensure every bite is bursting with flavor.",
+      "image": "/taste.svg",
+      "label": "Taste"
+    },
+    {
+      "id": 3,
+      "title": "Best Offers in Town",
+      "subtitle": "Take advantage of our special discounts and offers, available for a limited time only.",
+      "image": "/offers.svg",
+      "label": "Offers"
+    }
+  ]
