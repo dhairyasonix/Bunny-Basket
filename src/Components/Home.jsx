@@ -3,7 +3,6 @@ import BakingExperts from "./BakingExperts";
 import CustomerReview from "./CustomerReview";
 import FeaturesSection from "./FeaturesSection";
 import LandingPage from "./LandingPage";
-import Navbar from "./Navbar";
 import LazyLoadedSpecialBakes from "./SpecialBakes";
 
 const Home = () => {

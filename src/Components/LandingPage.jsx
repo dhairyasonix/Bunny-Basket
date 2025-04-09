@@ -11,7 +11,7 @@ const LandingPage = () => {
           scroll-behavior="none"
         />
       </div>
-      <div className="mt-36 px-20">
+      <div className="my-36 px-20">
         <div className="w-1/2 m-2 pt-10">
           <p className="font-semibold text-lg my-5">
             Get 25% off on yout first Order

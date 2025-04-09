@@ -2,7 +2,7 @@ import footerData from "../utils/footer.json";
 
 const Footer = () => {
   const { links, socialMedia, brand,copyright,payments } = footerData;
-  console.log(footerData);
+  
   const { name, tagline } = brand;
 
   return (
@@ -43,8 +43,8 @@ const Footer = () => {
       <div className="col-span-3 flex justify-between items-center mt-12">
 <h4>{copyright.text}</h4>
 <div className="flex">
-{payments.map((item)=>(
-<img className="w-10 ml-4 rounded-xs" src={item} alt={item} />
+{payments.map((item,index)=>(
+<img key={index} className="w-10 ml-4 rounded-xs" src={item} alt={item} />
 ))}
 </div>
       </div>

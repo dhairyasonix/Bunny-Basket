@@ -1,4 +1,5 @@
 import React from "react";
+import { Link, Links } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,16 +9,17 @@ const Navbar = () => {
       </div>
       <div className=" items-center space-x-4">
         {["Home", "About", "Menu", "Contact"].map((item,index) => (
-          <a key={index}
+          <Link key={index}
             to="/"
             className="text-gray-600 hover:text-gray-800 cursor-pointer"
           >
             {item}
-          </a>
+          </Link>
         ))}
       </div>
       <div>
-        <button className="border px-2 py-1 rounded-sm">cart</button>
+        <Link to={"/cart"}>
+        <button className="border px-2 py-1 rounded-sm">cart</button></Link>
       </div>
     </nav>
   );

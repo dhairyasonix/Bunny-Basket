@@ -1,10 +1,15 @@
 import React from 'react'
+import { useCart } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({data}) => {
 
-const {name,image_url,price, stars , reviews} = data
+const {id,name,image_url,price, stars , reviews} = data
+const { cart, addToCart, increment, decrement } = useCart();
 const totalStars =5;
-
+const cartItem = cart[id];
+  const quantity = cartItem?.quantity || 0;
+console.log(cart)
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
@@ -25,8 +30,27 @@ const totalStars =5;
     </div>
     <div className='flex py-2 items-center justify-between'>
     <p className="text-gray-600 text-lg font-semibold ">Rs {price}</p>
+    {quantity===0 ? (<button onClick={()=>addToCart(data)} className="mt-2 mx-2 border border-gray-400 text-gray-600  px-14 py-2 rounded-md hover:bg-gray-200">Add to Cart</button>):( <div className='flex gap-6 items-center'>
+      <div className="flex items-center gap-2">
+      <button
+        onClick={() => decrement(id)}
+        className="bg-gray-200 px-3 py-1 rounded text-lg hover:bg-gray-300"
+      >
+        -
+      </button>
+      <span className="text-lg font-medium">{quantity}</span>
+      <button
+        onClick={() => increment(id)}
+        className="bg-gray-200 px-3 py-1 rounded text-lg hover:bg-gray-300"
+      >
+        +
+      </button>
+    </div>
+    <Link to="/cart">
+    <button className='bg-gray-200 px-3 py-1 rounded text-lg hover:bg-gray-300'>Cart</button></Link>
+    </div>
+    )}
     
-    <button className="mt-2 mx-2 border border-gray-400 text-gray-600  px-14 py-2 rounded-md hover:bg-gray-200">Add to Cart</button>
     </div>
   </div>
   )
