@@ -6,7 +6,7 @@ import { CartProvider } from "../context/CartContext";
 
 const Body = () => {
   return (
-    <div>
+    <div className="">
        <CartProvider>
         <Navbar/>
         <Outlet/>

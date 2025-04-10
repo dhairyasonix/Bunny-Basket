@@ -16,7 +16,7 @@ const handleNext =()=>{
 
 
   return (
-    <div className='py-10 bg-amber-100'>
+    <div className='py-10 '>
 <CustomerCard data={CoustmerData[Select]}/>
       <div className='flex gap-4 justify-center'>
         <button disabled={Select<1} onClick={handlePrev} className='bg-white border p-2 m-2 rounded-full items-center justify-center shadow-md  hover:shadow-lg hover:border-white hover:shadow-[#6B3B0A]/50 transition-shadow duration-300 hover:bg-[#6b3b0a] group '><img className='w-8 h-8 group-hover:invert' src="/left.png" alt="Left" /></button>

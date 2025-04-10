@@ -28,30 +28,42 @@ console.log(cart)
       ))}
       <p className="text-gray-500 font-semibold pl-2">({reviews} Reviews)</p>
     </div>
-    <div className='flex py-2 items-center justify-between'>
-    <p className="text-gray-600 text-lg font-semibold ">Rs {price}</p>
-    {quantity===0 ? (<button onClick={()=>addToCart(data)} className="mt-2 mx-2 border border-gray-400 text-gray-600  px-14 py-2 rounded-md hover:bg-gray-200">Add to Cart</button>):( <div className='flex gap-6 items-center'>
+    <div className="flex py-2 items-center justify-between min-h-[52px]">
+  <p className="text-gray-600 text-lg font-semibold">Rs {price}</p>
+
+  {quantity === 0 ? (
+    <button
+      onClick={() => addToCart(data)}
+      className="mx-2 border border-[#9D4007] text-[#9D4007] px-14 py-1 rounded-md hover:bg-[#9D4007] hover:text-white shadow-sm hover:shadow-md hover:shadow-[#6B3B0A]/50 transition-all duration-100"
+    >
+      Add to Cart
+    </button>
+  ) : (
+    <div className="flex gap-4 items-center mx-2">
       <div className="flex items-center gap-2">
-      <button
-        onClick={() => decrement(id)}
-        className="bg-gray-200 px-3 py-1 rounded text-lg hover:bg-gray-300"
-      >
-        -
-      </button>
-      <span className="text-lg font-medium">{quantity}</span>
-      <button
-        onClick={() => increment(id)}
-        className="bg-gray-200 px-3 py-1 rounded text-lg hover:bg-gray-300"
-      >
-        +
-      </button>
+        <button
+          onClick={() => decrement(id)}
+          className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded hover:bg-[#9D4007] hover:text-white text-lg  "
+        >
+          -
+        </button>
+        <span className="text-lg font-medium">{quantity}</span>
+        <button
+          onClick={() => increment(id)}
+          className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded hover:bg-[#9D4007] hover:text-white text-lg "
+        >
+          +
+        </button>
+      </div>
+      <Link to="/cart">
+        <button className="bg-[#9D4007] text-white px-3 py-1 rounded text-lg shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50">
+          Cart
+        </button>
+      </Link>
     </div>
-    <Link to="/cart">
-    <button className='bg-gray-200 px-3 py-1 rounded text-lg hover:bg-gray-300'>Cart</button></Link>
-    </div>
-    )}
-    
-    </div>
+  )}
+</div>
+
   </div>
   )
 }

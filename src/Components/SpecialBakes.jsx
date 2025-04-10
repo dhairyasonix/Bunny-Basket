@@ -18,7 +18,7 @@ const SpecialBakes = () => {
     ? products[selectedCategory]
     : products[selectedCategory].slice(0, 8);
   return (
-    <section className="py-12 bg-blue-100 px-20">
+    <section className="py-12 bg-[#E8EEEA] px-20">
       <div className="mx-auto px-4">
         <h2 className="text-4xl font-bold mb-6">Our Special Bakes</h2>
         <div>
@@ -26,10 +26,10 @@ const SpecialBakes = () => {
             <button
               key={category}
               onClick={() => setselectedCategory(category)}
-              className={`px-6 py-2 my-2 mr-6 rounded-sm cursor-pointer ${
+              className={`px-6 py-2 my-2 mr-6 rounded-sm cursor-pointer shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50 ${
                 selectedCategory === category
-                  ? "bg-orange-500 text-white"
-                  : "bg-white text-gray-700"
+                  ? "bg-[#9D4007] text-white"
+                  : "bg-white text-[#622804] border border-transparent hover:border-[#9D4007] transition-all duration-100"
               } `}
             >
               {category}
@@ -45,7 +45,7 @@ const SpecialBakes = () => {
           <div className="flex justify-center">
             <button
               onClick={() => setShowAll(true)}
-              className="bg-orange-500 text-white px-12 py-2 rounded-sm hover:bg-orange-600"
+              className="bg-[#9D4007] text-white px-12 py-2 rounded-sm hover:bg-[#622804] transition-all duration-200"
             >
               Show More
             </button>
