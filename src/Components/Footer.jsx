@@ -6,7 +6,7 @@ const Footer = () => {
   const { name, tagline } = brand;
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 pt-16 pb-8 px-20 bg-amber-200">
+    <div id="Contact" className="grid grid-cols-1 md:grid-cols-3 pt-16 pb-8 px-20 bg-amber-200">
       <div className="col-span-1 flex flex-col justify-between pr-40">
         <h4 className="text-lg font-semibold">{name}</h4>
         <p>{tagline}</p>

@@ -1,9 +1,10 @@
 import React from "react";
 import Spline from "@splinetool/react-spline";
+import { Link } from "react-scroll";
 
 const LandingPage = () => {
   return (
-    <div className=" w-full text-black pt-1  ">
+    <div id="Home" className=" w-full text-black pt-1  ">
       <div className="absolute top-0 w-full overflow-hidden">
         <Spline
           className="h-screen"
@@ -24,9 +25,9 @@ const LandingPage = () => {
             treats crafted from the finest ingredients each bite a little piece
             of heaven.
           </p>
-          <button className="border px-4 py-1 my-5 rounded-sm">
+        <Link to="Menu"><button className="border px-4 py-1 my-5 rounded-sm z-[999]">
             Order Now
-          </button>
+          </button></Link> 
         </div>
         <div></div>
       </div>

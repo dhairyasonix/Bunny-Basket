@@ -1,6 +1,7 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import products from "../utils/products.json";
 import ProductCard from "./ProductCard";
+import { useLocation } from "react-router-dom";
 
 // Lazy load the ProductShowcase component with a delay for better performance
 const SpecialBakesLazy = lazy(
@@ -17,8 +18,19 @@ const SpecialBakes = () => {
   const visibleProducts = ShowAll
     ? products[selectedCategory]
     : products[selectedCategory].slice(0, 8);
+
+    const location = useLocation();
+
+useEffect(() => {
+  if (location.hash === "#Menu") {
+    const menuSection = document.getElementById("Menu");
+    if (menuSection) {
+      menuSection.scrollIntoView({ behavior: "auto" });
+    }
+  }
+}, [location]);
   return (
-    <section className="py-12 bg-[#E8EEEA] px-20">
+    <section id="Menu" className="py-12 bg-[#E8EEEA] px-20">
       <div className="mx-auto px-4">
         <h2 className="text-4xl font-bold mb-6">Our Special Bakes</h2>
         <div>
@@ -47,7 +59,7 @@ const SpecialBakes = () => {
               onClick={() => setShowAll(true)}
               className="bg-[#9D4007] text-white px-12 py-2 rounded-sm hover:bg-[#622804] transition-all duration-200"
             >
-              Show More
+              Check Menu
             </button>
           </div>
         )}
