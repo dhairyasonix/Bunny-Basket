@@ -5,7 +5,7 @@ const FeaturesSection = () => {
     <section className="py-16 ">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-20">
 {featuresData.map((item)=>(
-  <div key={item.id} className="p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition ">
+  <div key={item.id} className="p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition ">
           <img
             src={item.image}
             alt={item.label}

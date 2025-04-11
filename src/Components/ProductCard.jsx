@@ -50,7 +50,7 @@ const ProductCard = ({ data }) => {
               >
                 -
               </button>
-              <span className="text-lg font-medium">{quantity}</span>
+              <span className="text-lg font-medium w-3 text-center">{quantity}</span>
               <button
                 onClick={() => increment(id)}
                 className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded hover:bg-[#9D4007] hover:text-white text-lg "
