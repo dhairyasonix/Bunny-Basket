@@ -2,7 +2,7 @@ import React from "react";
 
 const BakingExperts = () => {
   return (
-    <div className="flex flex-col px-20 py-[15vh] items-center text-center ">
+    <div className="flex flex-col px-36 py-[12vh] items-center text-center ">
       <div className="w-1/2 ">
         <p className="text-lg font-semibold my-2">Our Chef</p>
         <h2 className="text-4xl md:text-4xl font-bold text-gray-800 mb-4">

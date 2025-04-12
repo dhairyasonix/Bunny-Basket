@@ -25,7 +25,7 @@ useEffect(() => {
   if (location.hash === "#Menu") {
     const menuSection = document.getElementById("Menu");
     if (menuSection) {
-      menuSection.scrollIntoView({ behavior: "auto" });
+      menuSection.scrollIntoView({ behavior: "smooth" });
     }
   }
 }, [location]);
@@ -57,9 +57,9 @@ useEffect(() => {
           <div className="flex justify-center">
             <button
               onClick={() => setShowAll(true)}
-              className="bg-[#9D4007] text-white px-12 py-2 rounded-sm hover:bg-[#622804] transition-all duration-200"
+              className="bg-[#9D4007] text-white px-12 py-2 rounded-sm hover:bg-[#622804] shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-all duration-200"
             >
-              Check Menu
+              Show More
             </button>
           </div>
         )}

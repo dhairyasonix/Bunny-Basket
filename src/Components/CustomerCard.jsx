@@ -3,7 +3,7 @@ import React from 'react'
 const CustomerCard = ({data}) => {
     const {name,comment,tag,image_url} =data
   return (
-    <section className="py-12 ">
+    <section className="py-10 ">
           <div className="container mx-auto ">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center ">
              
