@@ -7,7 +7,7 @@ if(!item)return;
     const {id,name,price,quantity} = item
 
   return (
-    <div className="flex justify-between m-2 items-center">
+    <div className="flex justify-between mx-2 mt-1 items-center">
   <h1 className='w-[200px] border text-xl'>{name} </h1>
 
   

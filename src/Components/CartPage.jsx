@@ -1,10 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
 import { CartItems } from "./CartItems";
 import { EmptyCart } from "./EmptyCart";
+import Coupon from "./Coupon";
 
 const CartPage = () => {
+const [showCoupon,setShowCoupon] = useState(false)
+const [discount, setDiscount] = useState(10);
+
+  const validCoupons = {
+    "BAKERY10": 10, // 
+    "BAKERY30": 30, // 
+  };
+ 
   useEffect(() => {
+    
     window.scrollTo(0, 0);
   }, []);
 
@@ -43,6 +53,11 @@ const CartPage = () => {
             type="text"
             placeholder="Address"
           />
+          <input
+            className="p-4 my-2  w-full bg-gray-800"
+            type="number"
+            placeholder="Postal code"
+          />
           <button className="p-4   w-full bg-red-600 rounded-lg ">
             Proceed to pay
           </button>
@@ -56,17 +71,41 @@ const CartPage = () => {
   <div className="h-[100px] border my-4"></div>
 
 
-  <div className="w-full border overflow-y-scroll ">
+  <div className="w-full border max-h-[440px] overflow-y-scroll ">
     {Object.values(cart).map((item) => (
       <div key={item.id}>
         <CartItems item={item} />
       </div>
     ))}
+    <div>
+{showCoupon === false ?<button onClick={()=>setShowCoupon(true)}>Apply Coupon</button> :  <Coupon validCoupons={validCoupons}/>}
+{<div>
+  
+  <span>{Object.keys(validCoupons).filter(item=> validCoupons[item]===discount)}</span>
+  <button  onClick={()=>setDiscount(0)}>🚮</button>
+</div>}
+    
+    </div>
+   
+   
+<div>
+  <h3>Bill Details</h3>
+  <div className="flex justify-between"> 
+    <span>Item total</span> <span>{getTotal()}</span>
+  </div>
+ {discount>0 && <div className="flex justify-between"> 
+    <span>Cuppon applied</span> <span>{discount}</span>
+  </div>}
+  <div className="flex justify-between"> 
+    <span>Delivery Fee | 2.4 kms</span> <span>20</span>
+  </div>
+</div>
+
   </div>
 
   
   <div className="absolute bottom-0 left-0 right-0  border-t p-4 flex items-center justify-between">
-    <h1 className="text-lg font-bold">Item Total</h1>
+    <h1 className="text-lg font-bold">TO PAY</h1>
     <span className="text-lg font-semibold">{getTotal()}</span>
   </div>
 </div>
