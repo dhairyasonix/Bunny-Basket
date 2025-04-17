@@ -6,7 +6,7 @@ import Coupon from "./Coupon";
 
 const CartPage = () => {
 const [showCoupon,setShowCoupon] = useState(false)
-const [discount, setDiscount] = useState(10);
+const [discount, setDiscount] = useState(0);
 
   const validCoupons = {
     "BAKERY10": 10, // 
@@ -30,7 +30,20 @@ const [discount, setDiscount] = useState(10);
       0
     );
   };
-  console.log();
+  const getBreakdown = () => {
+    const total = getTotal();
+    const discountAmount = (total * discount) / 100;
+    const deliveryCharge = 20;
+    const toPay = Math.round(total - discountAmount + deliveryCharge);
+    return { total, discountAmount, deliveryCharge, toPay };
+  };
+  const { total, discountAmount, deliveryCharge, toPay } = getBreakdown();
+
+  const handleCoupon =()=>{
+    setDiscount(0);
+    setShowCoupon(false)
+  }
+
   return (
     <div className=" grid grid-cols-3 w-full h-screen px-20 pt-24 pb-2 gap-4">
       <div className="col-span-2 w-full ">
@@ -78,12 +91,13 @@ const [discount, setDiscount] = useState(10);
       </div>
     ))}
     <div>
-{showCoupon === false ?<button onClick={()=>setShowCoupon(true)}>Apply Coupon</button> :  <Coupon validCoupons={validCoupons}/>}
-{<div>
-  
-  <span>{Object.keys(validCoupons).filter(item=> validCoupons[item]===discount)}</span>
-  <button  onClick={()=>setDiscount(0)}>🚮</button>
-</div>}
+{discount<=0 &&(showCoupon === false ?<button onClick={()=>setShowCoupon(true)}>Apply Coupon</button> :  <Coupon validCoupons={validCoupons} setDiscount={setDiscount}/>)}
+{discount > 0 && (
+  <div className="flex justify-between items-center">
+    <span>Coupon Applied: {Object.keys(validCoupons).find(key => validCoupons[key] === discount)}</span>
+    <button onClick={handleCoupon}>🚮</button>
+  </div>
+)}
     
     </div>
    
@@ -91,13 +105,13 @@ const [discount, setDiscount] = useState(10);
 <div>
   <h3>Bill Details</h3>
   <div className="flex justify-between"> 
-    <span>Item total</span> <span>{getTotal()}</span>
+    <span>Item total</span> <span>{total}</span>
   </div>
  {discount>0 && <div className="flex justify-between"> 
-    <span>Cuppon applied</span> <span>{discount}</span>
+    <span>Cuppon applied</span> <span>-{discountAmount}</span>
   </div>}
   <div className="flex justify-between"> 
-    <span>Delivery Fee | 2.4 kms</span> <span>20</span>
+    <span>Delivery Fee | 2.4 kms</span> <span>{deliveryCharge}</span>
   </div>
 </div>
 
@@ -106,7 +120,7 @@ const [discount, setDiscount] = useState(10);
   
   <div className="absolute bottom-0 left-0 right-0  border-t p-4 flex items-center justify-between">
     <h1 className="text-lg font-bold">TO PAY</h1>
-    <span className="text-lg font-semibold">{getTotal()}</span>
+    <span className="text-lg font-semibold">{toPay}</span>
   </div>
 </div>
       

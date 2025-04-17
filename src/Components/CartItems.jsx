@@ -34,7 +34,7 @@ if(!item)return;
     
      </div>
 
-    <span className='mx-4'>{price}RS</span> 
+    <span className='w-12'>{price}RS</span> 
 </div>
   )
 }
