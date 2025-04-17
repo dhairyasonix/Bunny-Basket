@@ -8,7 +8,7 @@ const ProductCard = ({ data }) => {
   const totalStars = 5;
   const cartItem = cart[id];
   const quantity = cartItem?.quantity || 0;
-  console.log(cart);
+  
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
