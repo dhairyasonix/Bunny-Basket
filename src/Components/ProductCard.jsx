@@ -1,5 +1,5 @@
 import React from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../Context/CartContext";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ data }) => {
@@ -8,7 +8,6 @@ const ProductCard = ({ data }) => {
   const totalStars = 5;
   const cartItem = cart[id];
   const quantity = cartItem?.quantity || 0;
-  
 
   return (
     <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
@@ -50,7 +49,9 @@ const ProductCard = ({ data }) => {
               >
                 -
               </button>
-              <span className="text-lg font-medium w-3 text-center">{quantity}</span>
+              <span className="text-lg font-medium w-3 text-center">
+                {quantity}
+              </span>
               <button
                 onClick={() => increment(id)}
                 className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded hover:bg-[#9D4007] hover:text-white text-lg "
