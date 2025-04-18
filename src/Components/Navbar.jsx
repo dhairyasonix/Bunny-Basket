@@ -36,7 +36,7 @@ const Navbar = () => {
       }`}
     >
       <div>
-        <img className="w-40 " src="/Bunny_basket.png" alt="logo" />
+        <img className="w-36 " src="/Bunny_basket.png" alt="logo" />
       </div>
       {!isCartPage && (
         <div className=" items-center space-x-4">

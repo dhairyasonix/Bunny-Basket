@@ -87,47 +87,54 @@ const CartPage = () => {
               <CartItems item={item} />
             </div>
           ))}
-          <div>
+          <div className="px-2 pt-4">
             {discount <= 0 &&
               (showCoupon === false ? (
-                <button onClick={() => setShowCoupon(true)}>
+                <button className="border w-full p-2 text-md font-semibold" onClick={() => setShowCoupon(true)}>
                   Apply Coupon
                 </button>
               ) : (
                 <Coupon validCoupons={validCoupons} setDiscount={setDiscount} />
               ))}
-            {discount > 0 && (
-              <div className="flex justify-between items-center">
-                <span>
-                  Coupon Applied:{" "}
-                  {Object.keys(validCoupons).find(
+            {discount > 0 && (<div className="flex justify-between border my-2 py-2 px-3">
+          <div>
+                        <h4 className="text-md font-semibold  ">{Object.keys(validCoupons).find(
                     (key) => validCoupons[key] === discount
-                  )}
-                </span>
-                <button onClick={handleCoupon}>🚮</button>
-              </div>
+                  )}</h4>
+            <h4 className="text-xs font-medium text-gray-400 ">
+            Offer applied on the bill
+            </h4>
+          </div>
+          <button
+            className="text-md font-semibold"
+            onClick={handleCoupon}
+          >
+            REMOVE
+          </button>
+        </div>
             )}
           </div>
 
-          <div>
-            <h3>Bill Details</h3>
-            <div className="flex justify-between">
+          <div className="p-2">
+            <h3 className="text-md font-semibold">Bill Details</h3>
+            <div className="flex justify-between text-md ">
               <span>Item total</span> <span>{total}</span>
             </div>
+            <div className="flex justify-between  text-md ">
+              <span>Delivery Fee | 2.4 kms</span> <span>{deliveryCharge}</span>
+            </div>
             {discount > 0 && (
-              <div className="flex justify-between">
+              <div className="flex justify-between text-md ">
                 <span>Cuppon applied</span> <span>-{discountAmount}</span>
               </div>
             )}
-            <div className="flex justify-between">
-              <span>Delivery Fee | 2.4 kms</span> <span>{deliveryCharge}</span>
-            </div>
+            
           </div>
         </div>
 
         <div className="absolute bottom-0 left-0 right-0  border-t p-4 flex items-center justify-between">
           <h1 className="text-lg font-bold">TO PAY</h1>
-          <span className="text-lg font-semibold">{toPay}</span>
+          <span className="text-lg font-bold">{toPay}</span>
         </div>
       </div>
     </div>
