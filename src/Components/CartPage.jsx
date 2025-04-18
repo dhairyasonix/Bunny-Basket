@@ -3,10 +3,12 @@ import { useCart } from "../Context/CartContext";
 import { CartItems } from "./CartItems";
 import { EmptyCart } from "./EmptyCart";
 import Coupon from "./Coupon";
+import Form from "./Form";
 
 const CartPage = () => {
   const [showCoupon, setShowCoupon] = useState(false);
   const [discount, setDiscount] = useState(0);
+
 
   const validCoupons = {
     BAKERY10: 10, //
@@ -44,39 +46,9 @@ const CartPage = () => {
   };
 
   return (
-    <div className=" grid grid-cols-3 w-full h-screen px-20 pt-24 pb-2 gap-4">
+    <div className=" grid grid-cols-3 w-full h-screen px-20 pt-24 pb-4 gap-4">
       <div className="col-span-2 w-full ">
-        <form
-          onSubmit={(e) => e.preventDefault()}
-          className="p-14  relative mx-auto w-2/3 bg-amber-100 text-white rounded-lg "
-        >
-          <input
-            className="p-4 my-4 w-full bg-gray-800"
-            type="text"
-            placeholder="Full Name"
-          />
-          <input
-            className="p-4 my-4 w-full bg-gray-800"
-            type="text"
-            placeholder="Email Address"
-          />
-          <input
-            className="p-4 my-2  w-full bg-gray-800"
-            type="text"
-            placeholder="Address"
-          />
-          <input
-            className="p-4 my-2  w-full bg-gray-800"
-            type="number"
-            placeholder="Postal code"
-          />
-          <button className="p-4   w-full bg-red-600 rounded-lg ">
-            Proceed to pay
-          </button>
-          <p className="text-xs m-1 p-2 text-red-600">
-            This is a personal project. No user information is stored or shared!
-          </p>
-        </form>
+       <Form toPay={toPay}/>
       </div>
       <div className="col-span-1 w-full h-full px-6  relative rounded-lg bg-amber-100">
         <div className="h-[100px] border my-4"></div>
