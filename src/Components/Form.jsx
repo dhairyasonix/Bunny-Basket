@@ -33,7 +33,7 @@ const validateData = () => {
     const zipRegex = /^\d{6}$/;
   
     if (!nameRegex.test(name)) {
-      setError("Please enter a valid full name (e.g., John Doe).");
+      setError("Please enter a valid full name (e.g., Dhairya Soni).");
       return false;
     }
   
