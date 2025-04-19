@@ -5,11 +5,7 @@ const CustomerCard = ({data}) => {
   return (
     <section className="py-10 opacity-0 animate-fadeIn overflow-hidden ">
           <div className="container mx-auto ">
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center transition-all duration-500 ease-in-out" >
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center " >
->>>>>>> 0e0c0cd (Fix testimonial card rendering sync issue2)
              
               <div className="relative my-2 mx-auto">
                 <img
