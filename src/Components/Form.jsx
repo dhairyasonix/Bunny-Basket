@@ -17,6 +17,7 @@ const navigate = useNavigate()
 const {name,email,address,postalcode}=data
 
 const handleDataChange =(e,item)=>{
+  setError("")
     setData((prev)=>({
         ...prev, [item]:e.target.value,
     }))
@@ -62,7 +63,7 @@ const handleSubmit=async()=>{
   return (
     <form
     onSubmit={(e) => e.preventDefault()}
-    className="p-14  relative mx-auto w-2/3 bg-amber-100 text-white rounded-lg "
+    className="p-14  relative mx-auto w-2/3 bg-white text-white rounded-lg "
   >
     <input  value={name} onChange={e=>handleDataChange(e,"name")}
       className="p-4 my-4 w-full bg-gray-800"

@@ -46,11 +46,11 @@ const CartPage = () => {
   };
 
   return (
-    <div className=" grid grid-cols-3 w-full h-screen px-20 pt-24 pb-4 gap-4">
+    <div className=" grid grid-cols-3 w-full h-screen px-20 pt-24 pb-4 bg-[#E8EEEA]">
       <div className="col-span-2 w-full ">
        <Form toPay={toPay}/>
       </div>
-      <div className="col-span-1 w-full h-full px-6  relative rounded-lg bg-amber-100">
+      <div className="col-span-1 w-full h-full px-6  relative rounded-lg bg-white">
         <div className="h-[100px] border my-4"></div>
 
         <div className="w-full border max-h-[440px] overflow-y-scroll ">

@@ -57,7 +57,7 @@ const Navbar = () => {
       <div>
         <button
           onClick={handleNavigate}
-          className="relative py-2 px-6 text-black text-lg  nded-full  overflow-hidden bg-white rounded-sm transition-all duration-400 ease-in-out shadow-sm hover:scale-105 hover:text-white hover:shadow-md hover:shadow-[#6B3B0A]/50 active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#622804] before:to-[#9D4007] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-sm hover:before:left-0"
+          className="relative py-1 px-6 text-black text-lg  nded-full  overflow-hidden bg-white rounded-sm transition-all duration-400 ease-in-out shadow-sm hover:scale-105 hover:text-white hover:shadow-md hover:shadow-[#6B3B0A]/50 active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#622804] before:to-[#9D4007] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-sm hover:before:left-0"
         >
           {isCartPage ? "Home" : "Cart"}
         </button>
