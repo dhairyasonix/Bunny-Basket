@@ -47,13 +47,15 @@ const CartPage = () => {
 
   return (
     <div className=" grid grid-cols-3 w-full h-screen px-20 pt-24 pb-4 bg-[#E8EEEA]">
-      <div className="col-span-2 w-full ">
+      <div className="col-span-2 w-full">
        <Form toPay={toPay}/>
       </div>
       <div className="col-span-1 w-full h-full px-6  relative rounded-lg bg-white">
-        <div className="h-[100px] border my-4"></div>
+        <div className="h-[100px] my-4 py-2">
+          <img className="h-full " src="./Bunny_basket.png" alt="" />
+        </div>
 
-        <div className="w-full border max-h-[440px] overflow-y-scroll ">
+        <div className="w-full border max-h-[430px] overflow-y-scroll ">
           {Object.values(cart).map((item) => (
             <div key={item.id}>
               <CartItems item={item} />
@@ -62,13 +64,13 @@ const CartPage = () => {
           <div className="px-2 pt-4">
             {discount <= 0 &&
               (showCoupon === false ? (
-                <button className="border w-full p-2 text-md font-semibold" onClick={() => setShowCoupon(true)}>
+                <button className="border border-dashed w-full px-2 py-3 text-md font-semibold cursor-pointer hover:shadow-md hover:text-[#6b3b0a]" onClick={() => setShowCoupon(true)}>
                   Apply Coupon
                 </button>
               ) : (
                 <Coupon validCoupons={validCoupons} setDiscount={setDiscount} />
               ))}
-            {discount > 0 && (<div className="flex justify-between border my-2 py-2 px-3">
+            {discount > 0 && (<div className="flex justify-between border border-dashed hover:shadow-md mb-2 py-2 px-3">
           <div>
                         <h4 className="text-md font-semibold  ">{Object.keys(validCoupons).find(
                     (key) => validCoupons[key] === discount
@@ -78,7 +80,7 @@ const CartPage = () => {
             </h4>
           </div>
           <button
-            className="text-md font-semibold"
+            className="text-md font-semibold cursor-pointer hover:text-[#6b3b0a] "
             onClick={handleCoupon}
           >
             REMOVE
@@ -90,23 +92,23 @@ const CartPage = () => {
           <div className="p-2">
             <h3 className="text-md font-semibold">Bill Details</h3>
             <div className="flex justify-between text-md ">
-              <span>Item total</span> <span>{total}</span>
+              <span>Item total</span> <span>₹{total}</span>
             </div>
             <div className="flex justify-between  text-md ">
-              <span>Delivery Fee | 2.4 kms</span> <span>{deliveryCharge}</span>
+              <span>Delivery Fee | 2.4 kms</span> <span>₹{deliveryCharge}</span>
             </div>
             {discount > 0 && (
-              <div className="flex justify-between text-md ">
-                <span>Cuppon applied</span> <span>-{discountAmount}</span>
+              <div className="flex justify-between text-md text-pink-500">
+                <span>Cuppon applied</span> <span>-₹{discountAmount}</span>
               </div>
             )}
             
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0  border-t p-4 flex items-center justify-between">
-          <h1 className="text-lg font-bold">TO PAY</h1>
-          <span className="text-lg font-bold">{toPay}</span>
+        <div className="absolute bottom-0 left-0 right-0  border-t mx-4 p-4 flex items-center justify-between">
+          <h1 className="text-md font-bold">TO PAY</h1>
+          <span className="text-md font-bold">₹{toPay}</span>
         </div>
       </div>
     </div>

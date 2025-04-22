@@ -66,33 +66,33 @@ const handleSubmit=async()=>{
     className="p-14  relative mx-auto w-2/3 bg-white text-white rounded-lg "
   >
     <input  value={name} onChange={e=>handleDataChange(e,"name")}
-      className="p-4 my-4 w-full bg-gray-800"
+      className="p-4 my-6 w-full bg-gray-800"
       type="text"
       placeholder="Full Name"
     />
     <input value={email} onChange={e=>handleDataChange(e,"email")}
-      className="p-4 my-4 w-full bg-gray-800"
+      className="p-4 mb-6 w-full bg-gray-800"
       type="text"
       placeholder="Email Address"
     />
     <input value={address} onChange={e=>handleDataChange(e,"address")}
-      className="p-4 my-2  w-full bg-gray-800"
+      className="p-4 mb-6 w-full bg-gray-800"
       type="text"
       placeholder="Address"
     />
     <input value={postalcode} onChange={e=>handleDataChange(e,"postalcode")}
-      className="p-4 my-2  w-full bg-gray-800"
+      className="p-4 mb-6 w-full bg-gray-800"
       type="number"
       placeholder="Postal code"
     />
-    <button onClick={handleSubmit} className="p-4   w-full bg-red-600 rounded-lg ">
+    <button onClick={handleSubmit} className="p-4  cursor-pointer w-full bg-red-600 rounded-lg ">
       Proceed to pay
     </button>
 
     {error && <p className="text-xs m-1 p-2 text-red-600">{error}
     </p>}
     <p className="text-xs m-1 p-2 text-red-600">
-      This is a personal project. No user information is stored or shared!
+      This is a test personal project. No user information is stored or shared!
     </p>
   </form>
   )

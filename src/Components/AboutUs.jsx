@@ -1,6 +1,7 @@
 import React from "react";
 
 import cake from "../assets/images/cake_about.png"
+import { Link } from "react-scroll";
 
 
 const AboutUs = () => {
@@ -39,9 +40,11 @@ const AboutUs = () => {
             <p className="text-gray-600 mb-6">
             At Bunny Basket, we believe that every bite should bring joy. Our bakery crafts wholesome treats using premium ingredients, blending tradition with creativity. From artisan breads to custom cakes, every item is baked with care and love.
             </p>
-            <button className="bg-[#9D4007] text-white px-6 py-2 rounded-md hover:bg-[#622804] shadow-sm  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-all duration-200">
+            <Link to="Story" smooth={true}
+              offset={60}
+              duration={500}><button className="bg-[#9D4007] text-white px-6 py-2 rounded-md hover:bg-[#622804] shadow-sm  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-all duration-200">
               Explore Our Story
-            </button>
+            </button></Link>
           </div>
         </div>
       </div>

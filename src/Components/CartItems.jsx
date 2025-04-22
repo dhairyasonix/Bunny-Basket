@@ -15,14 +15,14 @@ export const CartItems = ({ item }) => {
           <div className="flex items-center gap-2">
             <button
               onClick={() => decrement(id)}
-              className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded hover:bg-[#9D4007] hover:text-white text-lg"
+              className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded cursor-pointer hover:bg-[#9D4007] hover:text-white text-lg"
             >
               -
             </button>
             <span className="text-lg font-medium w-2">{quantity}</span>
             <button
               onClick={() => increment(id)}
-              className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded hover:bg-[#9D4007] hover:text-white text-lg "
+              className="bg-white border border-[#9D4007] text-[#9D4007] px-3 py-1 rounded cursor-pointer hover:bg-[#9D4007] hover:text-white text-lg "
             >
               +
             </button>
@@ -30,7 +30,7 @@ export const CartItems = ({ item }) => {
         </div>
       </div>
 
-      <span className="w-12">{price}RS</span>
+      <span className="w-12">₹{price}</span>
     </div>
   );
 };

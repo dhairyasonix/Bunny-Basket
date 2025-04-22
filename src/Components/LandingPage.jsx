@@ -25,7 +25,8 @@ const LandingPage = () => {
             treats crafted from the finest ingredients each bite a little piece
             of heaven.
           </p>
-        <Link to="Menu"><button className="bg-[#9D4007] text-white hover:bg-[#622804] shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-all duration-200  px-6 py-2 relative my-5 rounded-sm z-[999]">
+        <Link to="Menu" offset={10}
+              duration={500}><button className="bg-[#9D4007] text-white hover:bg-[#622804] shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-all duration-200  px-6 py-2 relative my-5 rounded-sm z-[999]">
             Order Now
           </button></Link> 
         </div>
