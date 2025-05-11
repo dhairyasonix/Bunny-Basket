@@ -10,12 +10,14 @@ const ProductCard = ({ data }) => {
   const quantity = cartItem?.quantity || 0;
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition duration-300">
-      <img
-        src={image_url}
-        alt={name}
-        className="w-full h-36 object-cover rounded-md mb-2"
-      />
+    <div className="bg-white rounded-lg shadow-md mb-6 p-4 hover:shadow-xl transition duration-300 ">
+      <div className="mx-auto px-4 h-44 relative">
+  <img
+    src={image_url}
+    alt={name}
+    className="w-60 rounded-md mb-2 absolute -top-16 left-1/2 transform -translate-x-1/2"
+  />
+</div>
       <h3 className="text-xl font-bold">{name}</h3>
       <div className="flex items-center">
         {[...Array(totalStars)].map((val, index) => (
