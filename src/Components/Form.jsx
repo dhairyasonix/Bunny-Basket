@@ -66,22 +66,22 @@ const handleSubmit=async()=>{
     className="p-14  relative mx-auto w-2/3 bg-white text-white rounded-lg "
   >
     <input  value={name} onChange={e=>handleDataChange(e,"name")}
-      className="p-4 my-6 w-full bg-gray-800"
+      className="p-4 my-6 w-full caret-black border-2 border-[#9D4007] placeholder:text-[#9D4007]"
       type="text"
       placeholder="Full Name"
     />
     <input value={email} onChange={e=>handleDataChange(e,"email")}
-      className="p-4 mb-6 w-full bg-gray-800"
+      className="p-4 mb-6 w-full bg-pink-400 placeholder:text-white"
       type="text"
       placeholder="Email Address"
     />
     <input value={address} onChange={e=>handleDataChange(e,"address")}
-      className="p-4 mb-6 w-full bg-gray-800"
+      className="p-4 mb-6 w-full bg-pink-400 placeholder:text-white"
       type="text"
       placeholder="Address"
     />
     <input value={postalcode} onChange={e=>handleDataChange(e,"postalcode")}
-      className="p-4 mb-6 w-full bg-gray-800"
+      className="p-4 mb-6 w-full bg-pink-400 placeholder:text-white"
       type="number"
       placeholder="Postal code"
     />

@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 const LandingPage = () => {
   return (
     <div id="Home" className=" w-full text-black pt-1">
-      <div className="absolute top-0 w-full overflow-hidden">
+      <div className="hidden lg:block absolute top-0 w-full overflow-hidden">
         <Spline
           className="h-screen"
           scene="https://prod.spline.design/95aW0RVi-IxLNYp7/scene.splinecode"

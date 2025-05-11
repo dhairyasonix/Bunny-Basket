@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Payment = () => {
+  localStorage.clear("cart")
   return (
-    <div>Payment</div>
+    <div>Payment sucessfull</div>
   )
 }
 
