@@ -14,7 +14,7 @@ const AboutUs = () => {
             <img
               src={cake}
               alt="Delicious Food"
-              className="w-[80%] scale-120  h-auto object-cover translate-x-[-30%] rounded-lg"
+              className="w-[80%] scale-150 md:scale-120  h-auto object-cover translate-x-[-30%] rounded-lg"
             />
             
             <div className="absolute top-8 right-20 bg-white opacity-90 p-4 shadow rounded-lg w-64">
@@ -22,7 +22,7 @@ const AboutUs = () => {
               <p className="text-yellow-500 text-lg">★★★★★</p>
               <p className="text-gray-500 text-sm">“Absolutely loved the pastries! The flavors were rich and authentic. Bunny Basket has become my go-to place for every celebration.”</p>
             </div>
-            <div className="absolute bottom-16 right-72 bg-white opacity-90 p-4 shadow rounded-lg w-48">
+            <div className="absolute md:bottom-16 bottom-0 md:right-72 right-20 bg-white opacity-90 p-4 shadow rounded-lg w-48">
               <h4 className="font-semibold">Customer Review Rating</h4>
               <p className="text-yellow-500 text-lg">★★★★★</p>
               
