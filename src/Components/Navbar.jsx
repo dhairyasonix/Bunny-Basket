@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`w-full fixed z-50 px-20 py-6 text-lg flex items-center justify-between text-black transition-transform duration-300 ease-in-out ${
+      className={`fixed z-50 px-20 py-6 text-lg flex items-center justify-between text-black transition-transform duration-300 ease-in-out ${
         show ? "translate-y-0" : "-translate-y-full"
       }`}
     >
