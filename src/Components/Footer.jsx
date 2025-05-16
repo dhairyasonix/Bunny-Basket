@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="flex mt-4 ">
           {socialMedia.map((item) => (
             <a
-              className="p-2 mr-6 lg:mr-4 bg-white  items-center justify-center rounded-md shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-shadow duration-300 hover:bg-[#6b3b0a] group "
+              className="p-2 mx-4 md:mx-0 md:mr-6 bg-white  items-center justify-center rounded-md shadow-md  hover:shadow-lg hover:shadow-[#6B3B0A]/50 transition-shadow duration-300 hover:bg-[#6b3b0a] group "
               key={item.platform}
               href={item.url}
             >
@@ -31,9 +31,9 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="col-span-3 md:col-span-2  flex flex-wrap md:justify-between md:gap-8 gap-16 justify-start md:pl-32 mt-4 mx-8 md:m-0 ">
+      <div className="col-span-3 md:col-span-2 pl-4 md:px-0 flex flex-wrap md:justify-between md:gap-8 gap-x-12 gap-y-6 justify-start md:pl-32 mt-4 mx-8 md:m-0">
         {Object.keys(links).map((section, index) => (
-          <div key={index}>
+          <div className="w-[40%] md:w-fit " key={index}>
             <h4 className="font-semibold mb-2 text-lg">
               {section.charAt(0).toUpperCase() + section.slice(1)}
             </h4>
@@ -47,13 +47,13 @@ const Footer = () => {
           </div>
         ))}
       </div>
-      <div className=" col-span-3 flex flex-col lg:flex-row justify-between items-center mt-12">
+      <div className="gap-y-4 col-span-3 flex flex-col lg:flex-row justify-between items-center mt-12 text-xs md:text-lg">
         <h4>{copyright.text}</h4>
         <div className="flex">
           {payments.map((item, index) => (
             <img
               key={index}
-              className="w-10 ml-4 rounded-xs"
+              className="w-12 ml-4 rounded-xs"
               src={item}
               alt={item}
             />
