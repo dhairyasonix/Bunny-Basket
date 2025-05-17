@@ -31,7 +31,7 @@ useEffect(() => {
 }, [location]);
   return (
     <section id="Menu" className="py-12 bg-[#E8EEEA]  md:px-20">
-      <div className="mx-auto px-4">
+      <div className=" px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Special Bakes</h2>
         <div>
           {Object.keys(products).map((category) => (

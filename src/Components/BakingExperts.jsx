@@ -2,8 +2,8 @@ import React from "react";
 
 const BakingExperts = () => {
   return (
-    <div id="Story" className="flex flex-col px-4 md:px-36 py-[12vh] md:items-center text-start md:text-center ">
-      <div className="md:w-1/2 w-[70%] mx-auto">
+    <div id="Story" className="flex flex-col px-4 md:px-36 pt-[6vh] md:pt-[12vh] items-center text-center ">
+      <div className="md:w-1/2 w-[80%] mx-auto text-start md:text-center">
         <p className="text-md md:text-lg font-semibold my-1">Our Chef</p>
         <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
           Meet our awesome Chefs
@@ -19,7 +19,7 @@ const BakingExperts = () => {
        
       <div className="p-2 bg-white rounded-lg shadow-md hover:shadow-lg transition ">
           <img src="/Nikita.png" alt="Nikita" className=" " />
-          <h3 className="text-xl font-semibold text-gray-800 my-2">Nikita Sharma</h3>
+          <h3 className=" text-xl font-semibold text-gray-800 my-2">Nikita Sharma</h3>
         </div>
         <div className="p-2  bg-white rounded-lg shadow-md hover:shadow-lg transition ">
           <img src="/Mike.png" alt="Mike" className=" " />

@@ -32,7 +32,7 @@ const AboutUs = () => {
           </div>
 
           
-          <div className= "mx-auto  w-[70%] mt-16 md:mt-0">
+          <div className= "mx-auto  w-[80%] mt-16 md:mt-0">
             <p className="text-md md:text-lg font-semibold my-1">About us</p>
             <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
               Health food to live a healthier life in the future
