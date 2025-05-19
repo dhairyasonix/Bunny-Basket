@@ -12,8 +12,9 @@ const LandingPage = () => {
           scroll-behavior="none"
         />
       </div>
+      <img className="md:hidden w-1/2 mx-auto mt-16" src="/spline.png" alt="spline" />
       <div className="my-6 md:my-36 md:px-20 px-4">
-        <div className=" m-2 pt-10">
+        <div className=" m-2 md:pt-10">
           <p className="font-semibold text-sm md:text-lg my-2 md:my-5">
             Get 25% off on yout first Order
           </p>

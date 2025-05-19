@@ -27,7 +27,7 @@ const CustomerCard = ({data}) => {
               
               <div className="w-[85%] mx-auto ">
                 <p className="text-md md:text-lg font-semibold my-1">Testimonial</p>
-                <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 md:w-[80%] w-full">
+                <h2 className="hidden md:block text-4xl font-bold text-gray-800 mb-4 md:w-[80%] w-full">
                 Our lovely customers love Bunny Basket!
                 </h2>
                 <p className="text-gray-600 mb-2 md:mb-6 min-h-[100px] ">
