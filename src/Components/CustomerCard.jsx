@@ -25,7 +25,7 @@ const CustomerCard = ({data}) => {
               </div>
     
               
-              <div className="w-[80%] mx-auto ">
+              <div className="w-[85%] mx-auto ">
                 <p className="text-md md:text-lg font-semibold my-1">Testimonial</p>
                 <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4 md:w-[80%] w-full">
                 Our lovely customers love Bunny Basket!
