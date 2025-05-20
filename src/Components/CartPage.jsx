@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
+
 import { useCart } from "../Context/CartContext";
 import { CartItems } from "./CartItems";
 import { EmptyCart } from "./EmptyCart";
@@ -8,6 +9,15 @@ import Form from "./Form";
 const CartPage = () => {
   const [showCoupon, setShowCoupon] = useState(false);
   const [discount, setDiscount] = useState(0);
+  const cartScrollRef = useRef(null);
+
+useEffect(() => {
+  window.scrollTo(0, 0);
+  if (cartScrollRef.current) {
+    cartScrollRef.current.scrollTop = cartScrollRef.current.scrollHeight;
+  }
+}, []); // Run this every time cart updates
+
 
 
   const validCoupons = {
@@ -15,9 +25,7 @@ const CartPage = () => {
     BAKERY30: 30, //
   };
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+ 
 
   const { cart } = useCart();
 
@@ -46,16 +54,16 @@ const CartPage = () => {
   };
 
   return (
-    <div className=" grid grid-cols-1 md:grid-cols-3 w-full h-screen  md:px-20 md:pt-24 pb-4 bg-[#E8EEEA]">
+    <div className=" grid grid-cols-1 md:grid-cols-3 w-full h-full md:h-screen  md:px-20 md:pt-24 pb-4 bg-[#E8EEEA]">
       <div className="order-2  md:order-1 col-span-2 w-full">
        <Form toPay={toPay}/>
       </div>
-      <div id="cart" className="order-1 md:order2 col-span-1 w-full h-auto md:h-full px-6  relative rounded-lg bg-white">
+      <div id="cart" className="order-1 md:order2 col-span-1 w-full h-auto md:h-full md:px-6 px-4 relative rounded-lg bg-white">
         <div className="h-[70px] md:h-[100px] my-4 py-2">
           <img className="h-full hidden md:block" src="./Bunny_basket.png" alt="logo" />
         </div>
 
-        <div className="w-full border max-h-[300px] md:max-h-[430px] overflow-y-scroll ">
+        <div ref={cartScrollRef} className="w-full border max-h-[300px] md:max-h-[430px] overflow-y-scroll ">
           {Object.values(cart).map((item) => (
             <div key={item.id}>
               <CartItems item={item} />

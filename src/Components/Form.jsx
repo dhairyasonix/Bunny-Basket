@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
 
@@ -66,7 +66,7 @@ const handleSubmit=async()=>{
     className="px-4 md:p-14  relative mx-auto md:w-2/3 bg-white text-white rounded-lg "
   >
     <input  value={name} onChange={e=>handleDataChange(e,"name")}
-      className="p-4 my-6 w-full caret-black border-2 border-[#9D4007] placeholder:text-[#9D4007]"
+      className="p-4 mb-6 w-full bg-pink-400 placeholder:text-white"
       type="text"
       placeholder="Full Name"
     />
