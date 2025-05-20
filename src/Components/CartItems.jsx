@@ -8,7 +8,7 @@ export const CartItems = ({ item }) => {
 
   return (
     <div className="flex justify-between mx-2 my-2 items-center">
-      <h1 className="w-[200px] text-lg ">{name} </h1>
+      <h1 className="w-[155px] md:w-[200px] text-lg ">{name} </h1>
 
       <div>
         <div className="flex gap-6 items-center">

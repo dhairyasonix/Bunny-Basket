@@ -46,16 +46,16 @@ const CartPage = () => {
   };
 
   return (
-    <div className=" grid grid-cols-3 w-full h-screen px-20 pt-24 pb-4 bg-[#E8EEEA]">
-      <div className="col-span-2 w-full">
+    <div className=" grid grid-cols-1 md:grid-cols-3 w-full h-screen  md:px-20 md:pt-24 pb-4 bg-[#E8EEEA]">
+      <div className="order-2  md:order-1 col-span-2 w-full">
        <Form toPay={toPay}/>
       </div>
-      <div className="col-span-1 w-full h-full px-6  relative rounded-lg bg-white">
-        <div className="h-[100px] my-4 py-2">
-          <img className="h-full " src="./Bunny_basket.png" alt="" />
+      <div id="cart" className="order-1 md:order2 col-span-1 w-full h-auto md:h-full px-6  relative rounded-lg bg-white">
+        <div className="h-[70px] md:h-[100px] my-4 py-2">
+          <img className="h-full hidden md:block" src="./Bunny_basket.png" alt="logo" />
         </div>
 
-        <div className="w-full border max-h-[430px] overflow-y-scroll ">
+        <div className="w-full border max-h-[300px] md:max-h-[430px] overflow-y-scroll ">
           {Object.values(cart).map((item) => (
             <div key={item.id}>
               <CartItems item={item} />
@@ -106,7 +106,7 @@ const CartPage = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0  border-t mx-4 p-4 flex items-center justify-between">
+        <div className="md:absolute bottom-0 left-0 right-0 my-4 md:my-0 border-t md:mx-4 p-4 flex items-center justify-between">
           <h1 className="text-md font-bold">TO PAY</h1>
           <span className="text-md font-bold">₹{toPay}</span>
         </div>

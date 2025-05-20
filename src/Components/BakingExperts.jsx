@@ -1,9 +1,9 @@
-import React from "react";
+
 
 const BakingExperts = () => {
   return (
     <div id="Story" className="flex flex-col px-4 md:px-36 pt-[6vh] md:pt-[12vh] items-center text-center ">
-      <div className="md:w-1/2 w-[85%] mx-auto text-start md:text-center">
+      <div className="md:w-1/2 w-[90%] mx-auto text-start md:text-center">
         <p className="text-md md:text-lg font-semibold my-1">Our Chef</p>
         <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
           Meet our awesome Chefs

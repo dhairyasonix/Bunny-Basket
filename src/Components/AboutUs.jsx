@@ -1,4 +1,4 @@
-import React from "react";
+
 
 import cake from "../assets/images/cake_about.png"
 import { Link } from "react-scroll";

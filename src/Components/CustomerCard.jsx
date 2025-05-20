@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const CustomerCard = ({data}) => {
     const {name,comment,tag,image_url} =data
